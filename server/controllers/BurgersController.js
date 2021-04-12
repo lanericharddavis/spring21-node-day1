@@ -14,7 +14,7 @@ export class BurgersController extends BaseController {
 
   async getAll(_, res, next) {
     try {
-      const values = await burgersService.getAll()
+      const values = await burgersService.find()
       return res.send(values);
     } catch (error) {
       next(error);
